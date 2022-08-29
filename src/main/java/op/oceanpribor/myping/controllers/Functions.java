@@ -35,6 +35,15 @@ public class Functions {
         ipList = createIpList(orderName);
         for (Order order : ordersList) {
             if (order.getName().equals(orderName)) {
+
+                ip=order.getIp().substring(0, order.getIp().length() - 1) + 55;
+                result="Server:\n";
+                if (Functions.PingFunc(ip))
+                    result += ip + "        OK\n";
+                else
+                    result += ip + "        UNAVAILABLE\n";
+                result += "Devices:\n";
+
                 for (Integer curIp : ipList) {
                     ip = order.getIp().substring(0, order.getIp().length() - 1) + curIp;
                     if (Functions.PingFunc(ip))
@@ -81,7 +90,6 @@ public class Functions {
                         tmpIpList = lastOctetList.split(",");
 
                         ipList.clear();
-                        ipList.add(55);
                         for (String curIp : tmpIpList) {
                             ipList.add(Integer.valueOf(curIp));
                         }

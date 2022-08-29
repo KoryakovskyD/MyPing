@@ -8,7 +8,7 @@
 
 #PRJNAME      NET              SID              DEVICES
 [BEGIN]
-Olymp-G       10.4.6.0         ol               {1,3,5,7,9,11}
+Olymp-G       10.4.6.0         ol               {1,3,5,7,9,11,12,13,21,23,25,27,31,33,99,100}
 PlatinaA      192.168.15.0     pla
 PlatinaV      192.169.37.0     plv
 RubiconV      192.168.16.0     rubv
