@@ -6,9 +6,9 @@
 #  Лишние пробелы, точки, кавычки и т.п. НЕДОПУСТИМЫ
 ###################################################################
 
-#PRJNAME      NET              SID
+#PRJNAME      NET              SID              DEVICES
 [BEGIN]
-Olymp-G       10.4.6.0         ol
+Olymp-G       10.4.6.0         ol               {1,3,5,7,9,11}
 PlatinaA      192.168.15.0     pla
 PlatinaV      192.169.37.0     plv
 RubiconV      192.168.16.0     rubv
@@ -25,7 +25,7 @@ Ros-VM        204.27.3.0       ros
 OlympG_k23    192.169.40.0     olm
 CCO-G         192.168.177.0    ols
 DISTANCIA     192.168.36.0     di
-ARIADNA       192.169.11.0     ar
+ARIADNA       192.169.11.0     ar                {1,3,99,100}
 KRIAZH        192.168.22.0     kr
 [END]
 
