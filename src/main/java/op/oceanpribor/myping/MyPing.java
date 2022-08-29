@@ -12,12 +12,16 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import op.oceanpribor.myping.models.Order;
+import op.oceanpribor.myping.models.PingResult;
 
 import java.io.*;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyPing extends Application {
-    HashMap<String,String> orderList = new HashMap<>();
+    List<Order> ordersList = new ArrayList<>();
+    ArrayList<String> nameOrders = new ArrayList<>();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -28,6 +32,9 @@ public class MyPing extends Application {
         ChoiceBox choiceBox = new ChoiceBox(setOrdersList());
         choiceBox.setValue("Olymp-G");
         Button button = new Button("Пуск");
+        button.setOnAction(e-> {
+            new PingResult((String) choiceBox.getValue());
+        });
         button.setPadding(new Insets(10,50,10,50));
         VBox root = new VBox(lbl, choiceBox, button);
         root.setAlignment(Pos.CENTER);
@@ -38,6 +45,7 @@ public class MyPing extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
 
     private ObservableList<String> setOrdersList() {
         try {
@@ -66,13 +74,17 @@ public class MyPing extends Application {
                         break;
                     }
                 }
-                orderList.put(key,value);
+                ordersList.add(new Order(key,value));
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return FXCollections.observableArrayList(orderList.keySet());
+
+        for (Order curOrder : ordersList) {
+            nameOrders.add(curOrder.getName());
+        }
+
+        return FXCollections.observableArrayList(nameOrders);
     }
 
     public static void main(String[] args) {

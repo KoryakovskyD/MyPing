@@ -4,6 +4,11 @@ public class Order {
     private String name;
     private String ip;
 
+    public Order(String name, String ip) {
+        this.name = name;
+        this.ip = ip;
+    }
+
     public String getName() {
         return name;
     }
