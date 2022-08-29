@@ -20,8 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyPing extends Application {
-    List<Order> ordersList = new ArrayList<>();
-    ArrayList<String> nameOrders = new ArrayList<>();
+
+    public static final List<Integer> ipList = new ArrayList();
+
+    public static final List<Order> ordersList = new ArrayList<>();
+    private ArrayList<String> nameOrders = new ArrayList<>();
 
     @Override
     public void start(Stage stage) throws IOException {
