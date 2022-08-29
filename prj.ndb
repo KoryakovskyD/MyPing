@@ -1,0 +1,31 @@
+#!/bin/sh
+
+###################################################################
+# База данных сетей заказов 
+#
+#  Лишние пробелы, точки, кавычки и т.п. НЕДОПУСТИМЫ
+###################################################################
+
+#PRJNAME      NET              SID
+[BEGIN]
+Olymp-G       10.4.6.0         ol
+PlatinaA      192.168.15.0     pla
+PlatinaV      192.169.37.0     plv
+RubiconV      192.168.16.0     rubv
+RubiconA      192.168.20.0     ruba
+RubiconR      192.168.30.0     rubr
+Minotavr-M    192.168.27.0     minm
+PalladaR      192.168.32.0     palr
+KIJUCH_SOLO   192.168.33.0     kij
+#KIJUCH_SOLO_TECH   192.168.23.0     kij
+BOREY-055A    192.169.57.0     bo
+BDRM381       192.169.65.0     bd81
+OldBDRM       193.232.172.0    bd
+Ros-VM        204.27.3.0       ros
+OlympG_k23    192.169.40.0     olm
+CCO-G         192.168.177.0    ols
+DISTANCIA     192.168.36.0     di
+ARIADNA       192.169.11.0     ar
+KRIAZH        192.168.22.0     kr
+[END]
+
